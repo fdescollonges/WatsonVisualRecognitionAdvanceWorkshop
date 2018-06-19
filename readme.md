@@ -34,7 +34,8 @@ https://console.bluemix.net/docs/services/visual-recognition/tutorial-custom-cla
 https://watson-developer-cloud.github.io/watson-vision-coreml-code-pattern/
 https://github.com/IBM/watson-vehicle-damage-analyzer
 https://github.com/hanleyweng/CoreML-in-ARKit
-William Griffith's lab
+
+and William Griffith's lab
 
 Thanks to all the contributors
 
