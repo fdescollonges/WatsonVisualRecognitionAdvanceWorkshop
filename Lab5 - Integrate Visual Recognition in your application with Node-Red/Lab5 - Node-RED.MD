@@ -191,7 +191,6 @@ The Node-RED ![1528750566011](assets/1528750566011.png) node provides a very e
 
     ![1528750119057](assets/1528750119057.png)
 
-    
 
 Now you understand the basic usage of Node-RED and Visual Recognition node. In next step, we will dig into the various parameters of the Visual Recognition node, and discover how to set them programmatically.
 
@@ -248,8 +247,6 @@ To start, we will create a new page in the Node-RED UI. Click on `+` near the in
 
   ![1528752169451](assets/1528752169451.png)
 
-  
-
 - Use the **camera**, **inject** and **change** nodes to use the Faces detection model
 
   - You can use this URL for the inject node : https://watson-visual-recognition-duo-dev.ng.bluemix.net/images/classify/small/faces.jpg
@@ -283,10 +280,6 @@ To start, we will create a new page in the Node-RED UI. Click on `+` near the in
       ![1528754010241](assets/1528754010241.png)
 
       ![1528754059700](assets/1528754059700.png)
-
-      
-
-    
 
 - Next, we will use the ![1528752777234](assets/1528752777234.png)node to list all the custom classifier available. We should find our **PizzaConditionModel** defined in previous labs
 
@@ -338,7 +331,6 @@ To start, we will create a new page in the Node-RED UI. Click on `+` near the in
 
   ![1528755289206](assets/1528755289206.png) ![1528755305590](assets/1528755305590.png)
 
-  
 
 ## 3 - STEP 3 : Exercise : Create a flow with multiple Visual Recognition models
 
@@ -381,13 +373,11 @@ Next, you will import a richer web application that you will customize to use th
 
 - Click on `+` near the info tab, to create a new page, and start in **Flow 4** empty canvas.
 
-- Copy the following code. It's a node-RED flow exported as JSON (available in Lab5/Lab5  Node-red_Flow Step4.json file)
+- Copy the following code. It's a node-RED flow exported as JSON (available in `Lab5/Lab5  Node-red_Flow Step4.json` file)
 
   ```JSON
   [{"id":"fd1a6e45.7cdfe","type":"template","z":"c25ff95f.a77358","name":"HTML & JS","field":"payload","fieldType":"msg","format":"html","syntax":"plain","template":"<html>\n<body>\n\n    <H3>Visual Recognition Workshop</H3>\n    <H4>Node-Red demonstration</H4>\n    <input id=\"picture\" type=\"file\" accept=\"image/*;capture=camera\">\n    <div id=\"results\"></div>\n    \n    <script>\n        var formData = new FormData();\n        var myInput = document.getElementById('picture');\n        \n        function sendPic() {\n            var request = new XMLHttpRequest();  \n            var file = myInput.files[0];   \n            formData.set(\"photo\", file);\n            // Display results\n            request.onreadystatechange = function() {\n                console.log(this);\n                if (this.readyState == 4 && this.status == 200) {                    \n                    document.getElementById(\"results\").innerHTML = this.response;\n                }\n            };\n            // Sending picture to IBM Cloud\n            request.open(\"POST\", \"/submit\");\n            request.send(formData);\n        }\n        // Listener on picture selection\n        myInput.addEventListener('change', sendPic, false);\n    </script>\n    \n</body>\n</HTML>\n\n\n\n\n","output":"str","x":393,"y":123,"wires":[["cf187695.9f5e7"]]},{"id":"a70203d9.5875f","type":"http in","z":"c25ff95f.a77358","name":"","url":"/pizzachecker","method":"get","upload":false,"swaggerDoc":"","x":204,"y":123,"wires":[["fd1a6e45.7cdfe"]]},{"id":"cf187695.9f5e7","type":"http response","z":"c25ff95f.a77358","name":"","statusCode":"","headers":{},"x":553,"y":123,"wires":[]},{"id":"3519713a.d7cbde","type":"http in","z":"c25ff95f.a77358","name":"","url":"/submit","method":"post","upload":true,"swaggerDoc":"","x":184,"y":243,"wires":[["2ef477f1.83ca18"]]},{"id":"c3f4f2de.3aa2c","type":"http response","z":"c25ff95f.a77358","name":"","statusCode":"","headers":{},"x":997,"y":243,"wires":[]},{"id":"6f6eb88a.147c78","type":"visual-recognition-v3","z":"c25ff95f.a77358","name":"","apikey":"n1mVWPnkkSGh3mXLvum_ykboJhsNALaOVscSb6p6oJGq","vr-service-endpoint":"https://gateway.watsonplatform.net/visual-recognition/api","image-feature":"classifyImage","lang":"en","x":640,"y":243,"wires":[["5b9bd312.20a82c"]]},{"id":"5b9bd312.20a82c","type":"template","z":"c25ff95f.a77358","name":"HTML Result","field":"payload","fieldType":"msg","format":"handlebars","syntax":"mustache","template":"        <h4>Node-RED Watson Visual Recognition output</h4>\n        <table border='1'>\n            <thead><tr><th>Name</th><th>Score</th></tr></thead>\n        {{#result.images.0.classifiers.0.classes}}\n        <tr><td><b>{{class}}</b></td><td><i>{{score}}</i></td></tr>\n        {{/result.images.0.classifiers.0.classes}}\n        </table>\n","output":"str","x":836,"y":243,"wires":[["c3f4f2de.3aa2c"]]},{"id":"2ef477f1.83ca18","type":"change","z":"c25ff95f.a77358","name":"Get image from request","rules":[{"t":"set","p":"payload","pt":"msg","to":"req.files[0].buffer","tot":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":404,"y":243,"wires":[["6f6eb88a.147c78"]]},{"id":"4beb83e6.4f25e4","type":"comment","z":"c25ff95f.a77358","name":"Mobile App to Upload picture","info":"","x":234,"y":83,"wires":[]},{"id":"562e6cac.f8d224","type":"comment","z":"c25ff95f.a77358","name":"Processing","info":"","x":174,"y":203,"wires":[]}]
   ```
-
-  
 
 - From the hamburger menu, on the top right of the page, select Import / Clipboad
 
@@ -422,11 +412,10 @@ Next, you will import a richer web application that you will customize to use th
 
   ![IMG_0082](assets/IMG_0082-1528759927656.PNG)![IMG_0083](assets/IMG_0083.PNG)
 
-  
 
 We can improve a little bit the UI of the Web Application to show the picture we want to analyse and display status of the query.
 
-- Replace the content of th **HTML & JS** node with the following code. Feel free to exerce you HTML / CSS skills to improve the UI
+- Replace the content of th **HTML & JS** node with the following code (available in the `Lab5/Lab5 Node-red HTML_JS Step4.txt` file). Feel free to exerce you HTML / CSS skills to improve the UI
 
 ```html
 <html>
