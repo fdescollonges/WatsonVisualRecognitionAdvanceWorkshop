@@ -2,7 +2,7 @@
 typora-copy-images-to: Lab3 - Test Images\assets
 ---
 
-# Visual Recognition Workshop 
+# Visual Recognition Workshop
 
 # Lab3 : Using Visual Recognition APIs with command line
 
@@ -42,9 +42,9 @@ On Windows, use **Git Bash shell** as command line terminal to execute all your 
 
  You can verify installation:
 
-  `git version` 
+  `git version`
 
-and 
+and
 
 `curl --version`
 
@@ -143,7 +143,7 @@ and
         "custom_classes": 0
     }
     ```
-    Confidence scores are in the range of 0 to 1, with a higher score indicating greater correlation. By default, the `/v3/classify` calls don't include classes with a score below `0.5`. You can change the threshold for the minimum score 
+    Confidence scores are in the range of 0 to 1, with a higher score indicating greater correlation. By default, the `/v3/classify` calls don't include classes with a score below `0.5`. You can change the threshold for the minimum score
 
     Try to find the curl query to specify the threshold in the curl command. Check on https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/curl.html?curl#get-classify
 
@@ -193,12 +193,12 @@ and
     The answer is :
 
     ```bash
-    curl -X POST -u "apikey:{your_api_key}" --form "images_file=@lab3_1.jpeg" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19&threshold=0.75" 
+    curl -X POST -u "apikey:{your_api_key}" --form "images_file=@lab3_1.jpeg" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19&threshold=0.75"
     ```
 
-    
 
-    
+
+
 
 ## 2 - Detect faces in an image
 Visual Recognition can detect faces in images. The response provides information such as the location of the face in the image and the estimated age range and gender for each face.
@@ -214,11 +214,11 @@ Visual Recognition can detect faces in images. The response provides information
     ```bash
     curl -X POST -u "apikey:{your_api_key}" --form "images_file=@lab3_2.png" "https://gateway.watsonplatform.net/visual-recognition/api/v3/detect_faces?version=2018-03-19"
     ```
-    You can see bellow the data returned by Watson Visual Recognition service. he response includes a location and age and gender estimates with scores. Scores range from 0-1, with a higher score indicating greater correlation. 
+    You can see bellow the data returned by Watson Visual Recognition service. he response includes a location and age and gender estimates with scores. Scores range from 0-1, with a higher score indicating greater correlation.
 
     It also includes for each faces identified, the location and the size of the face in the object `face_location`
 
-    
+
 
     ```json
     {
@@ -299,7 +299,7 @@ Visual Recognition can detect faces in images. The response provides information
         ],
         "images_processed": 1
     }
-    
+
     ```
 
 
@@ -326,7 +326,7 @@ Visual Recognition provides a beta food recognition model enhanced specificity a
     curl -X POST -u "apikey:{your_api_key}"  --form "images_file=@lab3_3.jpeg" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19&classifier_ids=food"
    ```
 
-   
+
 
    ```json
    {
@@ -357,13 +357,13 @@ Visual Recognition provides a beta food recognition model enhanced specificity a
    }
    ```
 
-3. You can call multiple classifiers in the same call and get results from all of them. 
+3. You can call multiple classifiers in the same call and get results from all of them.
 
    ```bash
    curl -X POST -u "apikey:{your_api_key}" --form "classifier_ids=default, food" --form "images_file=@lab3_3.jpeg" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
    ```
 
-For example, the previous call will return classifications for both default model and food model i.e. 
+For example, the previous call will return classifications for both default model and food model i.e.
 
 ```json
 {
@@ -460,13 +460,10 @@ Moreover, if you need to remove an individual customer's data (because of GDPR f
 curl -X POST -H "X-Watson-Metadata: customer_id=abc1234" -u "apikey:{your_api_key}" --form "classifier_ids=default, food" --form "images_file=@lab3_3.jpeg" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
 ```
 
-**Note**: You are responsible for creating customer_ID values, and ensuring that each is unique. 
+**Note**: You are responsible for creating customer_ID values, and ensuring that each is unique.
 
-Then you can delete all data previously collected for a customer using the following command : 
+Then you can delete all data previously collected for a customer using the following command :
 
 ```bash
-curl -X DELETE -u "apikey:{your_api_key}" "https://gateway.watsonplatform.net/visual-recognition/api/v3/user_data?customer_id=abc1234&version=2018-03-19" 
+curl -X DELETE -u "apikey:{your_api_key}" "https://gateway.watsonplatform.net/visual-recognition/api/v3/user_data?customer_id=abc1234&version=2018-03-19"
 ```
-
-
-

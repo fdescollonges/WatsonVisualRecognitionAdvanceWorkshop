@@ -47,7 +47,7 @@ Create the service on the IBM Cloud
 
 1. Login to the IBM Cloud : https://console.bluemix.net
 
-2. Go to the IBM Cloud **Catalog **and select **Watson** category. 
+2. Go to the IBM Cloud **Catalog **and select **AI** category. 
 
     ![1528446129950](media/1528446129950.png)
 
@@ -61,27 +61,31 @@ Create the service on the IBM Cloud
 
 4. Click the **Get Started** button to open **Watson Studio**.
 
-5. Click on **Continue** to select existing Oragnization and Space.
+5. Click on **Continue** to select existing Organization and Space.
 
-6. ![1528446440881](media/1528446440881.png) 
+  ![1535989286551](media/1535989286551.png)
 
-7. Click on **Get Started** to access your activated Watson Studio account 
+  If you have the following screen, please **contact an instructor** to get a "feature code" to be able to create a space in US South region.
 
-    ![1528446516412](media/1528446516412.png)
+  ![1535989467413](media/1535989467413.png)
 
-8. You can follow the Watson Studio introduction, and when ready, click the **New project** tile to begin this new custom image recognition model.
+6. Click on **Get Started** to access your activated Watson Studio account 
+
+  ![1528446516412](media/1528446516412.png)
+
+7. You can follow the Watson Studio introduction, and when ready, click the **New project** tile to begin this new custom image recognition model.
 
     ![](./media/image3.png)
 
-9. Choose the **Visual Recognition** template and click **OK**.
+8. Choose the **Watson Tools** template and click **OK**.
 
-    ![](./media/image4.png)
+    ![1535989181623](media/1535989181623.png)
 
-10. Enter a name for your project (e.g. My Pizza Quality Check) and a description if you like then click the **Create** button.
+9. Enter a name for your project (e.g. My Pizza Quality Check) and a description if you like then click the **Create** button.
 
-    ![](./media/image5.png)
+  ![1535982665975](media/1535982665975.png)
 
-    -   This project will create a Watson Visual Recognition service and the needed Cloud Object Storage.
+  -   This project will create a Watson Visual Recognition service and the needed Cloud Object Storage.
 
 Great! You have created a new machine learning project that you can collaborate on with others, upload data-sets, and create training models. Additionally, this project wizard has instantiated the Watson
 Visual Recognition service that is pre-trained on millions of consumer oriented images and can be used with no additional training (as we'll see below). 
@@ -93,7 +97,7 @@ Test the General model
 
 Before creating a custom model, let's check out the **General** model and the **Food** model that IBM has already trained on millions of images.
 
-1. Click the **watson\_visual\_combined-dsx** link for the Watson Visual Recognition service that was automatically created for you.
+1. Click the **watson-visual-combined-dsx** link for the Watson Visual Recognition service that was automatically created for you.
 
     ![1528448838106](media/1528448838106.png)
 
@@ -111,7 +115,7 @@ Before creating a custom model, let's check out the **General** model and the **
 
 Now let's explore the Faces model.
 
-1. Click the **watson\_vision\_combined-dsx** link to return to the model choices.
+1. Click the **watson-vision-combined-dsx** link to return to the model choices.
 
 2. Click the **Test** button of the **Faces** model.
 
@@ -123,7 +127,7 @@ Now let's explore the Faces model.
 
 Now let's explore the food model.
 
-5.  Click the **watson\_vision\_combined-dsx** link to return to the model choices.
+5.  Click the **watson-vision-combined-dsx** link to return to the model choices.
 6.  Click the **Test** button of the **Food (Beta)** model.
 7.  Click the **Test** tab of this model then  drag images from `Lab1/Lab1 - Test images` folder. 
 
