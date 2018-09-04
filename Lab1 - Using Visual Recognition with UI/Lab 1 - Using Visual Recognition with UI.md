@@ -107,7 +107,7 @@ Before creating a custom model, let's check out the **General** model and the **
 
     ![](./media/image7.png)
 
-4. Locate your favorite image search tool to find test images or use your personal images and drag images from `Test images` folder 
+4. Locate your favorite image search tool to find test images, use your personal images or drag images from `Test images` folder 
 
     ![1528451632107](media/1528451632107.png)
 

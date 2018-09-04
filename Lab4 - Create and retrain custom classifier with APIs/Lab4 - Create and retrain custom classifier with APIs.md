@@ -15,7 +15,7 @@ The goal is to illustrate how to use APIs to train and retrain custom models aut
 ## 0 - Before you begin
  If you didn't create a service instance, run through those steps from "**Lab 1 : Using Visual Recognition with UI**"
 
-The follow the "**Before you begin**" from "**Lab 3 : Using Visual Recognition APIs with command line**"
+Then follow the "**Before you begin**" from "**Lab 3 : Using Visual Recognition APIs with command line**"
 
 ## 1 - Creating a custom model
 Visual Recognition can learn from example images you upload to create a new, multi-faceted model. Each example file is trained against the other files in that call, and positive examples are stored as classes. These classes are grouped to define a single model, and return their own scores. Negative example files are not stored as classes.

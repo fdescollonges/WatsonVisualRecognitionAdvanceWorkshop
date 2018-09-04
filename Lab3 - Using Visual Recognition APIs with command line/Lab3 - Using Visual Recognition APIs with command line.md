@@ -299,7 +299,7 @@ Visual Recognition can detect faces in images. The response provides information
         ],
         "images_processed": 1
     }
-
+    
     ```
 
 
@@ -467,3 +467,4 @@ Then you can delete all data previously collected for a customer using the follo
 ```bash
 curl -X DELETE -u "apikey:{your_api_key}" "https://gateway.watsonplatform.net/visual-recognition/api/v3/user_data?customer_id=abc1234&version=2018-03-19"
 ```
+
