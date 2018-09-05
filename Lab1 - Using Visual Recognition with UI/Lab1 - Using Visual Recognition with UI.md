@@ -49,11 +49,11 @@ Create the service on the IBM Cloud
 
 2. Go to the IBM Cloud **Catalog **and select **AI** category. 
 
-    ![1528446129950](media/1528446129950.png)
+    ![1536140193087](media/1536140193087.png)
 
 3. Then click the **Watson Studio** tile, then choose a name for your service (e.g. Watson Studio-pizza), then click the **Create** button.
 
-    ![](./media/image2.png)
+    ![1536140318860](media/1536140318860.png)
 
     - Watson Studio is the tool for building AI models in a collaborative fashion so you can provide a more democratic training process that reduces AI biases.
 
