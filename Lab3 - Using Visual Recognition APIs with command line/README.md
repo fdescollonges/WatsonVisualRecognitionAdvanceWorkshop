@@ -18,11 +18,7 @@ The full description of APIs is here : https://www.ibm.com/watson/developercloud
 - Login to Watson Studio Website : https://dataplatform.ibm.com
 - Select Watson Services from Services menu
 
-<<<<<<< HEAD
-![1528459196063](assets/1528459196063.png)
-=======
 ![1528459196063](Lab3 - Test Images/assets/1528459196063-1528460528600.png)
->>>>>>> parent of f474ffd... Update README.md
 
 - Click on your Visual Recognition Service (named **watson-vision-combined-dsx**)
 - On next screen, click on Credentials tab
@@ -30,11 +26,7 @@ The full description of APIs is here : https://www.ibm.com/watson/developercloud
 - Click on the arrow next to View credentials
 - Copy the apikey value.
 
-<<<<<<< HEAD
-![1528459401152](assets/1528459300384.png)
-=======
 ![1528459401152](Lab3 - Test Images/assets/1528459401152-1528460520850.png)
->>>>>>> parent of f474ffd... Update README.md
 
 
 
@@ -46,7 +38,7 @@ Follow the installation instructions using the default options
 
 On Windows, use **Git Bash shell** as command line terminal to execute all your scripts
 
-![git_bash](assets/git_bash.png)
+![git_bash](Lab3 - Test Images/assets/git_bash.png)
 
  You can verify installation:
 
@@ -58,11 +50,7 @@ and
 
 
 
-<<<<<<< HEAD
-![1528461033919](assets/1528459401152.png)
-=======
 ![1528461033919](Lab3 - Test Images/assets/1528461033919.png)
->>>>>>> parent of f474ffd... Update README.md
 
 
 
@@ -76,7 +64,7 @@ and
 
     - Modify the location of the images\_file to point to the file of your choice or use
 
-      ![1528811407580](Lab3 - Test Images/1528811407580.png)
+      ![1528811407580](Lab3 - Test Images/assets/1528811407580.png)
 
     ```bash
     curl -X POST -u "apikey:{your_api_key}" --form "images_file=@lab3_1.jpeg" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
@@ -217,7 +205,7 @@ Visual Recognition can detect faces in images. The response provides information
 
 1. Use the provided **lab3_2.png** file or the picture with a person of your choice.
 
-    ![1528811431265](Lab3 - Test Images/1528811431265.png)
+    ![1528811431265](Lab3 - Test Images/assets/1528811431265.png)
 
 1. Issue the following command to the `POST /v3/detect_faces` method to upload and analyze the image. If you use your own image, the maximum size is 10 MB:
     - Replace `{your_api_key}` with the service credentials you copied earlier.
@@ -321,7 +309,7 @@ Visual Recognition provides a beta food recognition model enhanced specificity a
 
 1. Use the provided **lab3_3.jpeg** file or the picture with a person of your choice.
 
-   ![1528811455768](Lab3 - Test Images/1528811455768.png)
+   ![1528811455768](Lab3 - Test Images/assets/1528811455768.png)
 
 2. Issue the following command to the `POST /v3/classify` using the classifier_ids parameter to use specifically the food model. This method will upload and analyze the image the specified model. If you use your own image, the maximum size is 10 MB:
 
@@ -458,7 +446,7 @@ For example, the previous call will return classifications for both default mode
 
 ## 4 - Privacy considerations
 
-By default, all Watson services log requests and their results. Logging is done only to improve the services for future users. The logged data is not shared or made public. To prevent IBM from accessing your data for general service improvements, set the `X-Watson-Learning-Opt-Out` request header to `true` for all requests. (Any value other than `false` or `0` disables request logging for that call.) You must set the header on each request that you do not want IBM to access for general service improvements. 
+By default, all Watson services log requests and their results. Logging is done only to improve the services for future users. The logged data is not shared or made public. To prevent IBM from accessing your data for general service improvements, set the `X-Watson-Learning-Opt-Out` request header to `true` for all requests. (Any value other than `false` or `0` disables request logging for that call.) You must set the header on each request that you do not want IBM to access for general service improvements. 
 
 Example :
 
@@ -466,7 +454,7 @@ Example :
 curl -X POST 'X-Watson-Metadata: customer_id=abc1234' -H "X-Watson-Learning-Opt-Out: true" -u "apikey:{your_api_key}" --form "classifier_ids=default, food" --form "images_file=@lab3_3.jpeg" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
 ```
 
-Moreover, if you need to remove an individual customer's data (because of GDPR for instance) from a Visual Recognition service instance with multiple customers, you first need to associate that data with a unique **Customer ID** for each individual that may have provided data. To specify the Customer ID for any data sent using the `POST /classifiers` method, include the **X-Watson-Metadata: customer_id** property in your header.  
+Moreover, if you need to remove an individual customer's data (because of GDPR for instance) from a Visual Recognition service instance with multiple customers, you first need to associate that data with a unique **Customer ID** for each individual that may have provided data. To specify the Customer ID for any data sent using the `POST /classifiers` method, include the **X-Watson-Metadata: customer_id** property in your header.  
 
 ```bash
 curl -X POST -H "X-Watson-Metadata: customer_id=abc1234" -u "apikey:{your_api_key}" --form "classifier_ids=default, food" --form "images_file=@lab3_3.jpeg" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
@@ -479,4 +467,3 @@ Then you can delete all data previously collected for a customer using the follo
 ```bash
 curl -X DELETE -u "apikey:{your_api_key}" "https://gateway.watsonplatform.net/visual-recognition/api/v3/user_data?customer_id=abc1234&version=2018-03-19"
 ```
-
