@@ -18,7 +18,7 @@ The full description of APIs is here : https://www.ibm.com/watson/developercloud
 - Login to Watson Studio Website : https://dataplatform.ibm.com
 - Select Watson Services from Services menu
 
-![1528459196063](Lab3 - Test Images/assets/1528459196063-1528460528600.png)
+![1528459196063](Lab3 - Test Images/assets/1528459196063.png)
 
 - Click on your Visual Recognition Service (named **watson-vision-combined-dsx**)
 - On next screen, click on Credentials tab
@@ -26,7 +26,7 @@ The full description of APIs is here : https://www.ibm.com/watson/developercloud
 - Click on the arrow next to View credentials
 - Copy the apikey value.
 
-![1528459401152](Lab3 - Test Images/assets/1528459401152-1528460520850.png)
+![1528459401152](Lab3 - Test Images/assets/1528459300384.png)
 
 
 
@@ -50,7 +50,7 @@ and
 
 
 
-![1528461033919](Lab3 - Test Images/assets/1528461033919.png)
+![1528461033919](Lab3 - Test Images/assets/1528459401152.png)
 
 
 
