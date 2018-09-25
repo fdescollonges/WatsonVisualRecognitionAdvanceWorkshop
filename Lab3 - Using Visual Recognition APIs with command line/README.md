@@ -26,7 +26,7 @@ The full description of APIs is here : https://www.ibm.com/watson/developercloud
 - Click on the arrow next to View credentials
 - Copy the apikey value.
 
-![1528459401152](Lab3 - Test Images/assets/1528459300384.png)
+![1528459401152](assets/1528459300384.png)
 
 
 
@@ -38,7 +38,7 @@ Follow the installation instructions using the default options
 
 On Windows, use **Git Bash shell** as command line terminal to execute all your scripts
 
-![git_bash](Lab3 - Test Images/assets/git_bash.png)
+![git_bash](assets/git_bash.png)
 
  You can verify installation:
 
@@ -50,7 +50,7 @@ and
 
 
 
-![1528461033919](Lab3 - Test Images/assets/1528459401152.png)
+![1528461033919](assets/1528459401152.png)
 
 
 
