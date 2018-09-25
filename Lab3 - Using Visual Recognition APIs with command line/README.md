@@ -18,7 +18,7 @@ The full description of APIs is here : https://www.ibm.com/watson/developercloud
 - Login to Watson Studio Website : https://dataplatform.ibm.com
 - Select Watson Services from Services menu
 
-![1528459196063](Lab3 - Test Images/assets/1528459196063.png)
+![1528459196063](assets/1528459196063.png)
 
 - Click on your Visual Recognition Service (named **watson-vision-combined-dsx**)
 - On next screen, click on Credentials tab
@@ -64,7 +64,7 @@ and
 
     - Modify the location of the images\_file to point to the file of your choice or use
 
-      ![1528811407580](Lab3 - Test Images/assets/1528811407580.png)
+      ![1528811407580](Lab3 - Test Images/1528811407580.png)
 
     ```bash
     curl -X POST -u "apikey:{your_api_key}" --form "images_file=@lab3_1.jpeg" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
@@ -205,7 +205,7 @@ Visual Recognition can detect faces in images. The response provides information
 
 1. Use the provided **lab3_2.png** file or the picture with a person of your choice.
 
-    ![1528811431265](Lab3 - Test Images/assets/1528811431265.png)
+    ![1528811431265](Lab3 - Test Images/1528811431265.png)
 
 1. Issue the following command to the `POST /v3/detect_faces` method to upload and analyze the image. If you use your own image, the maximum size is 10 MB:
     - Replace `{your_api_key}` with the service credentials you copied earlier.
@@ -309,7 +309,7 @@ Visual Recognition provides a beta food recognition model enhanced specificity a
 
 1. Use the provided **lab3_3.jpeg** file or the picture with a person of your choice.
 
-   ![1528811455768](Lab3 - Test Images/assets/1528811455768.png)
+   ![1528811455768](Lab3 - Test Images/1528811455768.png)
 
 2. Issue the following command to the `POST /v3/classify` using the classifier_ids parameter to use specifically the food model. This method will upload and analyze the image the specified model. If you use your own image, the maximum size is 10 MB:
 
