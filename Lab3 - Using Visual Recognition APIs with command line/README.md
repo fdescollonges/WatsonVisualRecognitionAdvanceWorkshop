@@ -17,18 +17,14 @@ The full description of APIs is here : https://www.ibm.com/watson/developercloud
 ## 0 - Before you begin
 - Login to Watson Studio Website : https://dataplatform.ibm.com
 - Select Watson Services from Services menu
-
-![1528459196063](Lab3 - Test Images/assets/1528459196063-1528460528600.png)
+- ![1528459196063-1528460528600](Lab3 - Test Images/assets/1528459196063-1528460528600.png)
 
 - Click on your Visual Recognition Service (named **watson-vision-combined-dsx**)
 - On next screen, click on Credentials tab
 - Copy and store the credentials to authenticate to your service instance
 - Click on the arrow next to View credentials
 - Copy the apikey value.
-
-![1528459401152](Lab3 - Test Images/assets/1528459401152-1528460520850.png)
-
-
+- ![1528459401152-1528460520850](Lab3 - Test Images/assets/1528459401152-1528460520850.png)
 
 On windows, you need **cURL**. I suggest to install **git** as it will be required in later labs. **git** comes with bash shell and cURL.
 
@@ -48,8 +44,6 @@ and
 
 `curl --version`
 
-
-
 ![1528461033919](Lab3 - Test Images/assets/1528461033919.png)
 
 
@@ -64,7 +58,8 @@ and
 
     - Modify the location of the images\_file to point to the file of your choice or use
 
-      ![1528811407580](Lab3 - Test Images/assets/1528811407580.png)
+    - ![1528811407580](Lab3 - Test Images/assets/1528811407580.png)
+
 
     ```bash
     curl -X POST -u "apikey:{your_api_key}" --form "images_file=@lab3_1.jpeg" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19"
