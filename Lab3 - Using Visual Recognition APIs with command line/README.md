@@ -1,5 +1,5 @@
 ---
-typora-copy-images-to: Lab3 - Test Images\assets
+typora-copy-images-to: assets
 ---
 
 # Visual Recognition Workshop
@@ -17,14 +17,14 @@ The full description of APIs is here : https://www.ibm.com/watson/developercloud
 ## 0 - Before you begin
 - Login to Watson Studio Website : https://dataplatform.ibm.com
 - Select Watson Services from Services menu
-- ![1528459196063-1528460528600](Lab3 - Test Images/assets/1528459196063-1528460528600.png)
+- ![1528459196063-1528460528600](assets/1528459196063-1528460528600.png)
 
 - Click on your Visual Recognition Service (named **watson-vision-combined-dsx**)
 - On next screen, click on Credentials tab
 - Copy and store the credentials to authenticate to your service instance
 - Click on the arrow next to View credentials
 - Copy the apikey value.
-- ![1528459401152-1528460520850](Lab3 - Test Images/assets/1528459401152-1528460520850.png)
+- ![1528459401152-1528460520850](assets/1528459401152-1528460520850.png)
 
 On windows, you need **cURL**. I suggest to install **git** as it will be required in later labs. **git** comes with bash shell and cURL.
 
@@ -34,7 +34,7 @@ Follow the installation instructions using the default options
 
 On Windows, use **Git Bash shell** as command line terminal to execute all your scripts
 
-![git_bash](Lab3 - Test Images/assets/git_bash.png)
+![git_bash](assets/git_bash.png)
 
  You can verify installation:
 
@@ -44,9 +44,9 @@ and
 
 `curl --version`
 
-![1528461033919](Lab3 - Test Images/assets/1528461033919.png)
 
 
+![1528461033919](assets/1528461033919.png)
 
 
 ## 1 - Classify an image
