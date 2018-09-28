@@ -283,9 +283,9 @@ To start, we will create a new page in the Node-RED UI. Click on `+` near the in
 
 - Next, we will use the ![1528752777234](assets/1528752777234.png)node to list all the custom classifier available. We should find our **PizzaConditionModel** defined in previous labs
 
-  - Add an **inject** node, **visual recognition <u>util</u>** node and 
+  - Add an **inject** node, **visual recognition <u>util</u>** node and a **debug** node
 
-  - The payload of the inject node is node important in this case as we will only list all classifiers availabe
+  - The payload of the inject node is not important in this case as we will only list all classifiers availabe
 
   - Set the following properties of the **visual recognition util** node. **Detect** property should be set to "Retreive a list of classifiers"
 
